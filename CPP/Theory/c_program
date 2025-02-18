@@ -1,0 +1,814 @@
+OOP  (OBJECT ORIENTED PROGRAMMING)
+
+
+
+07-08
+..............
+
+OOP(Object oriented programming)
+
+Manupulator......
+ARGUMENTLESS MANUPULATORS.
+
+hex is non paramatics(spelling wrong) 
+"showcase"= manupulator that show 0x in front of the answer.
+
+
+ARGUMENT MANUPULATOR
+noshowpoint
+showppoint
+
+
+Reference variable
+no location for b
+b is reference variable
+int a=2
+int &b=a;
+** Reference variables are declared using the symbol "&"
+** Reference variables are usrf yp creates alies of already ecisting variables.
+
+
+07-09
+.............
+
+Namespace in Cpp:
+1. Namespace is a name given to a group/collection of different identifiers.  
+2. Namespace is used to avoid name collision.
+3. The keyword namespace is used to create or define a new namespace.
+4. alias pf existing namespace can also be created.
+
+
+
+
+
+ 07-14
+ ................
+Typecasting
+      Conversion of variable of one datatype to another datatype is called typecasting
+There are two types of typecasting:-
+i) Implicit typecasting:- Perform by compiler itself.
+        
+
+        char->int->long int-> float->double-> long double.
+                  Eg:- 
+                        int x=3;
+                        float y=2.5,z;
+                        z=x+y;
+                        z=5.5
+Compiler do automatically presicion typecasting, Here compiler automatically change int 3 into 3.0 and float 2.5 as and so gives result as 5.5
+
+
+
+
+ii) Explicit typecasting:- Perform by programmer. 
+    We make to change y as int so it change float into int                    
+                  example;-
+                        int x=3;
+                        float y=2.5,z;
+                        z=x+(int)y;   C++ and C
+                           OR
+                        z=x+int(y);   C++ only
+                        z=5;
+
+
+
+Preprocessor Directives.
+      -->They are the lines included in the code predict by a hash symbol(#).
+      -->Preprocessor directives are not program statements but they are instructions/directives for the preprocessor.
+      -->The preprocessor examine the preprocessor directives before the real compilation of the code begin preprocessor directives in C++
+      ==># includes (Header file inclusion)
+      --># defibe (Marco definitinon)
+
+Example
+            #include <iostream>     //Header file
+            #define PI 3.1415       //3.149
+
+            int main()
+            {
+            cout<<"Value of PI"<<PI<<endl;
+            return 0;
+            }
+
+
+
+ Const keyword/Const qualifier::::
+      #include <iostream>
+      using namespace std;
+      int main()
+      {
+      const float PI=3.14159;
+      float radius;
+      cout<<"Enter radius"<<endl;
+      cin>>radius;
+      cout<<"Area "<<PI*radus*radius<<endl;
+      } 
+
+
+
+ENUMERATION:- An enumeration is a userdefined datatype consisting of set of named constants called enumerators,
+
+      Example
+                  #include <iostram>
+                  using namespace std;
+                  int main()
+                  {
+                  enum Days{Sunday=1,monday,tuesday,wednesday,thursday,firday,saturday};
+                  enum Days today= Sunday;
+                  switch(today)
+                  {
+                  case 2: cout<<"its Monday"; break;
+                  default: cout<<It's not monday;
+                  }
+                  return 0;
+                  }
+
+
+
+.....................................................................
+      07-15
+
+Typedef keyword
+ It is used to create new data types from existing data types.
+ Example:-
+    #include <iostream>
+    using namespace std;
+    typedef int integer;
+
+    interger main()
+    {
+      integer a,b;
+      cin>>a>>b;
+      int a=a+b;
+
+    }  
+
+
+            CONTROL STRUCTURE IN C++
+
+i) Sequential control structure (sequentially)
+ii) Selection control structure (if, else if, nested if, switch)
+iii) Iterative control structure (while, do while, for)
+iv) Jump structure(contiue, break, goto, return)
+     continue               |    goto
+                              int main(){
+                              int a=7;
+                              
+int main()                   L1: cout<<
+{
+      int a=7;              
+      for(;a<15;a++)        
+      {                   
+      if(a<10){          
+      continue;             
+      }                
+      cout<<a<<endl;            
+      }                   
+}
+
+
+
+
+
+
+
+
+......................................
+07-16
+
+FUNCTION
+      is an independent block of code that can be called to get some functionallity
+
+
+Call function
+
+      There are 0 or more inputs in function
+      function should atmost 1 output
+
+
+
+SYNTAX OF FUNCTION
+      <return type> (function name)(argument , list )
+      {
+
+            //Body of function
+      }
+
+
+Example
+     { 
+      float sum(float a,float b)     // float -> return type ,sum-> function name,  (float a, float b)---> aarguments name    
+      float res= a+b;
+      return res;
+      }
+
+
+CATEGORIZED OF FUNCTION
+
+APPROACH 1
+
+i)    Library function:-      included in C++
+                              standard library 
+                              getline(),getc()
+
+
+
+ii) User defined function:-     defined by user for local purpose
+
+
+
+
+APPROACH 2
+
+
+      categorized a example
+      float sum(float x,float y)
+
+      categorized b example
+      void sum(float x,float y)
+      {
+      cout<<"Sum:"<<x+y;
+      }
+
+      categorized c example
+      float sum(void)
+      {
+      float x=3.5,y=2.4;
+      return x+y;
+      }
+
+      categorized d example
+
+      void sum()
+      {
+      float x=2.2, y=3.4
+      cout <<"sum"<<x+y;
+      }
+
+
+
+
+
+
+COMPONENTS OF FUNCTION
+
+i) function prototype/declaration
+ii) Function call
+iii) FUnction defination
+
+
+
+
+#include <iostream>
+using namespace std;
+float sum(float a, float b);            //function prototype declaration 
+int main()
+{
+  float x;
+  x = sum(2.8, 3.5);                  //function call
+  cout << x << endl;
+}
+float sum(float a, float b)            //function defination
+{
+  float res;
+  res = a + b;
+  return res;
+}
+
+
+
+
+
+
+
+
+Function with default argument
+
+      A function in which some argument are provided default values at the time of declaration is called default argument function.
+
+      Example:-
+            void sum(int a, int b-3)
+
+            //In the function sum the second argument b is provided a default argument 3
+
+            Point to be noted
+             1. Default argument should be provided from right to left
+             2. Default argument concept is used for better memory management during function call
+             3. It is also used to realize polymerism (through function overloading).
+
+
+
+
+  Inline function
+      The primary objective inline fucntion is to save memory space which bcomes apprectable when a function is likely to be called many times.
+
+      However each time a function is called, it taked a lot of extra time in executing a series of instruction for task like 
+      Jumping to the function
+      Saving registers
+      pushing arguments into stack
+      returning to the calling function
+
+
+
+      One solution to this problem is
+      using macro defination
+      but they are not really function therofore the usual error checking doesnot occur during compilation
+
+
+      C++ proposes a second solution
+      -using inline function
+
+
+      to elimate the cost of calls to small functions, c++ uses inline function concept that expands the called function in the same line where it is invoked. That is the compiler replaces the function call with the corresponding function code.
+
+      The keyword inline is used for 
+
+
+
+
+
+
+
+
+
+
+
+....................................
+07-27
+
+
+
+* If a program consists of multiple function with same name, then this situation is called function overloading.
+
+* For function overloading  , one of these conditions must be satisfied :
+i). The function arguments differ in datatype.
+ii). The function argument lists differ in length.\
+iii). The function arguments differ in order.
+
+
+example:
+      void sum(int,int);    
+      void sum(int , int , int);  
+      void sum(int, float);
+      void sum(float, float);
+
+
+
+Function overloading is used to realise compile time polymerphism.
+
+
+
+                  STORAGE CLASS IN C++
+
+  int x;
+
+  variabe declaration gives following information.
+  i. Name of the variable.
+  ii. Data type of variable.
+  iii. Size of memory spaces allocation to the variable.
+  iv. Nature of data that can be stored in the variable.
+
+
+* Storage class concept in C++ extends the notationn of variable declaration
+* Storage class is mentioned at the left most of the variable declaration.
+* It gives us following additional information about the variable.
+i. Default value of the variable.
+ii. Storage value of ..  ,,
+iii. Scope    ''       ''
+iv. Lifetime  ''       ''
+
+
+
+      Syntax
+
+<storage class> <data type> <variable name>
+ register int x;
+
+* These are following storage classes availabe in C++
+
+ i. Auto
+ ii. register
+ iii. static
+ iv. extern
+ v. mutable
+
+
+
+
+....................................
+07-28
+
+IN MS WORD (STORAGE CLASS TABLE)
+
+
+ 
+
+  ....................................
+  07-29
+
+  Struction in CPP
+
+    It is a user defined datatype that represent collection of heterogeneous data items (i.e data items with different data types)
+
+    SYNTAX
+
+    struct <structure name>
+    {
+      <datatype> mem 1;
+      <data type> mem 2;
+    };
+
+
+
+struct employee
+    {
+      int id;
+      float salary;
+    };
+
+
+
+    Initilization of Structure
+
+    ********* Static initilization
+
+    struct employee emp = {100,1000000.00}
+
+
+
+**********Dynamic Initilization
+
+      struct employee e1;
+      cout<<"Enter the employee id";
+      cin>>e1.id;
+
+      cout<<"Enter the employee salary";
+      cin>>e1.salary;
+
+
+      Structure array:
+
+
+ Static initilization of array structure
+
+  struct employee elist[3]={{10,200000.00},{11,100000.00},{12,30000.00}};;
+
+
+Dynnamic initilization of array structure
+
+
+      struct employee elist[3]
+      for(i=0; i<3; i++)
+      {
+            cout<<"Enter id";             cin>>elist[i].id;
+            cout<<"Enter salary";         cin>>elist[i].salary;
+      }
+
+
+
+
+POINTER TO STRUCTURE
+
+
+struct employee *p;
+struct employee e1={100,40000.00};
+p=&e1;
+
+cout<<"ID: "<<p->id<<endl;
+cout<<salary: <<p->salary<<endl;
+
+
+
+
+
+............................................
+08-01
+
+CLASS AND OBJECT IN CPP
+
+Class Rectangle
+{
+      int leng, breadth;
+
+      public:
+            void setData (int l, int b)
+            {
+            len=l;
+            breadth=b;
+            }
+            void display(){
+            cout<<"Length: "<<leng<<endl<<"breadth: "<<breadth<<endl;
+            }
+
+            void area(){
+            cout<<"Area= "<<leng*breadth<<endl;
+            }
+}
+
+
+
+
+
+
+
+
+....................................................
+09-07
+
+Access Specifier / Modifier
+
+    * Access specifers in C++ are used to control access to members of a class
+    * Access specifier can be used in C++ to achieve data security /data binding and encapsulation
+    * Following access specifiers exist in C++ (In MS WORD...)
+
+i) Private
+ii) Protected
+iii) Public
+
+
+  Nesting of member function inside class,
+
+
+  Example:
+    class A{
+    private:
+      void k (){
+      cout<<k<<endl;
+      }
+    public:
+      void m(){
+      cout<<"m()"<<endl;
+      k();
+      }
+    };
+
+   int main()
+   {
+     A a;
+     a.m();                   // We will get m(); and k(); As we call from public but we cannot directly from private.
+   }
+
+
+
+
+
+
+
+
+........................................
+09-08
+
+
+Constat member of a class: 
+ constant local variable
+1. Constant member variable 
+2. Constant member function
+
+
+class A
+{
+      const int k;     // Constant member variable
+
+
+      void m() const    //constant member function
+      {
+
+
+      }
+}
+
+.........................
+09-12
+
+      3.FRIEND FUNCTION AND CLASS
+
+ By rule, private members of a class cannot be accessied from outside.
+ Accessing private members of a class from outside directly will breach the property of encapsulation.
+
+Therefore it is generally not allows.
+There is an exception friend function of a class or a friend class can access private members of the given class.
+
+
+accessing private memebrs of a class from outside directly might be influence. Therefore it has to be outside. Therefore friend functon or class has to be chosen with caution. 
+
+The keyword friend os used for declaring a function class as a friend of a particular close friend functions are declared only (not defiend) inside the class. They ar defined outside the class. But the keyword friend is not allowed to be used at the time of defination .... to be continued
+
+
+
+
+
+
+
+..............................
+09-13
+
+CLASS AS FRIEND
+
+class A{
+      private:
+      int x;
+      public:
+      fiend class B;
+};
+
+
+
+
+........................................
+09-19
+
+
+
+CONSTRUCTOR
+A costructor is a special member function defined inside a class which has following properties:-
+
+i) The name of the constructor is exactly the same as the class name.
+
+ii) Constructor has no return type.
+
+
+
+Example:-
+
+
+class Student
+{
+      int roll;
+      string name;
+
+      public:
+      Student(){
+      roll=100;
+      name="Ram"
+      }
+
+      int getRoll(){return roll;}
+      string getName(){return name}
+      void setRoll(int r){roll=r}
+};
+
+
+
+
+TYPES OF CONSTRUCTOR
+
+i) Default constructor:-
+      a constructor that takes no argument is called default constructor if the developer doesnot provide explicit default constructor, then the compiler will provide one argument is defalut constructor
+
+ii) Paramaterized constructor
+      A constructor that takes parameter / arguments is called paramaterized constructor.
+ If the developer provides parameterized constuctor then the compiler will not provide the default constructor. 
+   A class may contain more than one constructors. This situation is called constructor overloads. For this the argument lists of constructor must differ.
+
+
+iii) Copy Constructor
+      A constructor that creates a new object of a given class by using (copying member variables) an already existing object of the same class is called copy constructor.
+
+      The previously existing object is passed as argument to the copy constructor .
+      The previously existing object is called source and new object being created is called target 
+      Member variables of source object are copied to the target object.
+   
+   note:- In C++, copy constructor is also in Default constructor
+
+
+
+
+
+CONSTRUCTURE WITH DEFAULT ARGUMENT:-
+ 
+      class Sample{
+      int a,b,c;
+      public:
+            Sample(int x=10, int y=20, int z=30){
+            a=x; b=y; c=z;
+            }
+
+            Sample(int x=10, int y=20){
+
+            }
+      }
+
+
+
+
+Destructor
+
+Destructor is a special member function inside a class that destroys the object (releases the memory occupied by object).
+Name of class and destructor must be identical.
+Destructor must be preceded by a tilde symbol (~).
+It does not participate in inheritance.
+It can't be overloaded.
+It must be public.
+It is automatically called at the end of the function call.
+It takes no arguments.
+
+Example. 
+class A 
+{
+      int x;
+      public:
+      A(int p) {x=p;}
+     ~A(){
+      cout<< "x:"<<x; 
+      getch();
+      }
+  void add (int a){x=x+2;}    
+};
+
+int main()
+{
+      A aob(7);
+      aob.add(5);
+}
+
+
+
+
+.......................................
+
+Typecasting
+      Conversion of variable of one datatype to another datatype is called typecasting
+There are two types of typecasting:-
+A. BASIC TYPECASTING
+
+ i) Implicit typecasting:- Perform by compiler itself.
+        
+
+        char->int->long int-> float->double-> long double.
+                  Eg:- 
+                        int x=3;
+                        float y=2.5,z;
+                        z=x+y;
+                        z=5.5
+Compiler do automatically presicion typecasting, Here compiler automatically change int 3 into 3.0 and float 2.5 as and so gives result as 5.5
+
+
+
+
+ii) Explicit typecasting:- Perform by programmer. 
+    We make to change y as int so it change float into int                    
+                  example;-
+                        int x=3;
+                        float y=2.5,z;
+                        z=x+(int)y;   C++ and C
+                           OR
+                        z=x+int(y);   C++ only
+                          z=5;
+
+                          
+
+      B) BASIC TO CLASS TYPECASTING
+ 
+            Eg:-
+            class Sample
+            {
+             int x;
+              public:
+              Sample(){
+              void display()
+              {
+              cout<<"x: "<<x<<endl
+              }
+              };
+               Sample(int k)
+               {
+               x=k
+               }
+
+
+            };
+
+            int main()
+            {
+            int a=10;
+            Sample s;
+            s=a;
+            }
+
+
+            Paramaterized constructor with one parameter is needed for basic type to Class type typecasting.
+
+
+
+
+ C) CLASS TYPE TO BASIC TYPE
+
+
+ Eg:-
+            class Sample
+            {
+             int x;
+              public:
+               Sample(int k)
+               {
+               x=k
+               }
+
+
+            };
+
+            int main()
+            {
+            int a=10;
+            Sample s;
+            s=a;
+            }

@@ -1,0 +1,26 @@
+      		INHERITANCE IN CPP
+
+  It is the process of acquering properties of base class by a derived class.
+
+
+
+
+  __________________________________________________________________________________
+  Here is an algorithm for the code implementation of Boolean matrix operations join, meet, and Boolean Product in C language:
+
+Include the necessary header files stdio.h, stdlib.h, and stdbool.h.
+Define the constant ROW and COL to determine the number of rows and columns of the matrices.
+Define three functions join, meet, and BooleanProduct to perform the respective operations.
+join returns the result of the logical OR of two Boolean values.
+meet returns the result of the logical AND of two Boolean values.
+BooleanProduct returns the result of comparing two Boolean values for equality.
+In the main function, declare three matrices A, B, and C to store the input matrices and the result of operations.
+Read the elements of matrices A and B from the user.
+Perform the join operation by iterating over the elements of matrices A and B and storing the result in matrix C.
+Print the result of the join operation stored in matrix C.
+Perform the meet operation by iterating over the elements of matrices A and B and storing the result in matrix C.
+Print the result of the meet operation stored in matrix C.
+Perform the BooleanProduct operation by iterating over the elements of matrices A and B and storing the result in matrix C.
+Print the result of the BooleanProduct operation stored in matrix C.
+Return 0 to indicate successful execution of the program.
+  

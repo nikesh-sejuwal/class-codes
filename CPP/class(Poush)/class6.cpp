@@ -1,0 +1,39 @@
+// Call by reference
+
+#include <iostream>
+using namespace std;
+
+class complex
+{
+public:
+  int r, i;
+
+  void setdata(int a, int b)
+  {
+    r = a;
+    i = b;
+  }
+  void display()
+  {
+
+    cout << r << (i < 0 ? "" : "+") << i << "i" << endl;
+  }
+  complex *add(complex &c)
+  {
+    complex c;
+    c.r = c1->r + c2->r;
+    c.i = c1->i + c2->i;
+    return c;
+  }
+};
+int main()
+{
+  complex c1, c2, c3;
+  c1.setdata(3, -7);
+  c2.setdata(4, -1);
+  c1.display();
+  c2.display();
+  c3 = c1.add(&c1, &c2);
+  c3.display();
+  return 0;
+}

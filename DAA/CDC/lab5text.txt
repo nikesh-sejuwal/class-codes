@@ -1,0 +1,11 @@
+if x == 10 {
+    for i = 0; i < 5; i++
+    else {
+        switch (x) {
+            case 1:
+                break;
+            default:
+                continue;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+//uniform float count=400.0; 
+
+struct Create{
+    float mass,velocity,color;
+    vec2 plot,offset;
+    };
+    
+void Display(Create s,inout vec4 fragColor ,vec2 fragCoord){
+
+    if((fragCoord.x>=s.plot.x)&& (fragCoord.x <=(s.plot.x+s.offset.x)) 
+    && (fragCoord.y>=s.plot.y) && (fragCoord.y <=(s.plot.y+s.offset.y)))
+    {
+    fragColor=vec4(1.0,0.0,0.0,1.0);
+    }
+}
+
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+    float t=iTime;
+  //  count-=10.0;
+    fragColor=vec4(0.0,0.0,0.0,1.0);
+    float x1,offx1,y1,offy1,x2,offx2,y2,offy2;
+    
+    //  Big mass 
+    x1=400.0,y1=5.0,offy1=120.0,offx1=120.0;
+    
+    // Small mass
+    x2=200.0,y2=2.50,offy2=60.0,offx2=60.0;
+    
+    // Bigmass and small mass weight 
+    float BigMass=10.0,BigVelocity=1.0,BigColor=1.0;
+    float SmallMass=12.0,Smallvelocity=0.0,SmallColor=0.0;
+    
+    
+    
+    
+    
+    float distance= mod((x1*BigVelocity/mod(t,1.001)),(800.0-120.0));
+    
+
+    Create Big=Create(BigMass,BigVelocity,BigColor,vec2(distance,y1),vec2(offx1,offy1));
+    Display(Big,fragColor,fragCoord);
+    
+
+    Create small=Create(SmallMass,Smallvelocity,SmallColor,vec2(x2,y2),vec2(offx2,offy2));
+    Display(small,fragColor,fragCoord);
+
+
+}
